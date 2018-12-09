@@ -1,0 +1,16 @@
+---
+# tasks file for fbaroni.findspark
+
+
+- name: Paquetes PIP | instala
+  pip: name="{{ item }}" state=latest
+  become: true
+  with_items:
+    - findspark
+    - matplotlib
+    - seaborn
+    - pandas
+    - jupyter
+  tags:
+    - pip
+
