@@ -1,7 +1,6 @@
 ---
 # tasks file for fbaroni.findspark
 
-
 - name: Paquetes PIP | instala
   pip: name="{{ item }}" state=latest
   become: true
@@ -11,6 +10,8 @@
     - seaborn
     - pandas
     - jupyter
+    - tweepy
+    - textblob
   tags:
     - pip
 

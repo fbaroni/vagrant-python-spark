@@ -3,6 +3,5 @@
   vars:
    - ansible_os_family: "Debian"
   roles:
-    - { role: azavea.spark, become: true }
     - { role: geerlingguy.pip, become: true }    
     - { role: fbaroni.findspark, become: true }
