@@ -1,6 +1,14 @@
 ---
 # tasks file for fbaroni.findspark
-
+- name: Install dependencies
+  apt:
+    name:
+      - python3
+      - python3-pip
+      - python3-setuptools
+    state: latest
+    update_cache: True
+    
 - name: Paquetes PIP | instala
   pip: name="{{ item }}" state=latest
   become: true

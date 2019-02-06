@@ -1,7 +1,10 @@
 ---
 - hosts: all
+  #sudo apt install python3-tk
   vars:
-   - ansible_os_family: "Debian"
+   - pip_package: python3-pip
+   - pip_executable: python3-pip
+  
   roles:
     - { role: geerlingguy.pip, become: true }    
     - { role: fbaroni.findspark, become: true }
